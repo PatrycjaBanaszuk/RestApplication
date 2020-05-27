@@ -36,3 +36,4 @@ docker run --restart=always --name benexcompany/benyrepo:patka-development -p 80
  ToDo: logowanie do plikow
  ToDo: scheduler
  ToDo: service to service 
+to moja nowa zmiana
