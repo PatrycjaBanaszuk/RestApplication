@@ -1,0 +1,8 @@
+
+spring:
+  application:
+    name: Aplication
+  datasource:
+    username: Patrycja
+    password: Patka1703
+    url: jdbc:mysql://localhost:3308/PatkaDatabase

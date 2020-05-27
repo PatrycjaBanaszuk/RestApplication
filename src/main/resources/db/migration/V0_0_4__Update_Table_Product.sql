@@ -1,0 +1,2 @@
+ALTER TABLE product
+MODIFY barcode BIGINT;

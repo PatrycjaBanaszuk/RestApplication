@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS product (
+product_number INT AUTO_INCREMENT PRIMARY KEY,
+description VARCHAR(255) NOT NULL,
+barcode INT
+);
