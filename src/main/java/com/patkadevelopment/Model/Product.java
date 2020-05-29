@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Product {
+    // TODO: 29/05/2020 Relationship between product and problem
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

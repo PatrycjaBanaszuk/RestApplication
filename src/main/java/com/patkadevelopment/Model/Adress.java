@@ -14,7 +14,7 @@ import java.time.ZonedDateTime;
 @Where(clause = "deleted_on is null")
 
 public class Adress {
-
+    // TODO: 29/05/2020 create relationship between user and address
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

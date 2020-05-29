@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @Where(clause = "deleted_on is null")
 public class User {
 
+    // TODO: 29/05/2020 create relationship between user and address
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

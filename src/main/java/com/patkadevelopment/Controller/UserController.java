@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+    // TODO: 29/05/2020 Change import, delete commented out code
     private UserServiceImpl userService;
 
     public UserController(UserServiceImpl uzytkownikService) {
