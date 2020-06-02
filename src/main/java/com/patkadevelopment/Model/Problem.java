@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @Where(clause = "deleted_Date is null")
 public class Problem {
+    // TODO: 30/05/2020 Change huNumber to problemId and relatively every usage of it
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

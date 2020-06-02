@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProblemRepository extends JpaRepository<Problem,Integer> {
-
+// TODO: 29/05/2020 extend search in db for new options
 
 }
