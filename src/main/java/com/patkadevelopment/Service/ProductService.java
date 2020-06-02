@@ -8,6 +8,8 @@ public interface ProductService {
 
     Product createProduct (Product product);
 
+    List<Product> createManyProducts (List<Product> productList);
+
     void deleteProduct ( final int productNumber );
 
     List<Product> getListOfProducts();
@@ -15,5 +17,6 @@ public interface ProductService {
     Product updateProduct (Product product);
 
     Product getProduct(final int productNumber);
+
 
 }

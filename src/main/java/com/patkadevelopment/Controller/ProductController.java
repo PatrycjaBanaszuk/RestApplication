@@ -15,18 +15,34 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
     @PostMapping
-    public Product createProduct(@RequestBody Product product) { return productService.createProduct(product);}
+    public Product createProduct(@RequestBody Product product) {
+        return productService.createProduct(product);
+    }
+
+    @PostMapping(value = "/productList")
+    public List<Product> createManyProducts(@RequestBody List<Product> productList) {
+       return productService.createManyProducts(productList);
+    }
 
     @PutMapping
-    public Product editProduct(@RequestBody Product product) {return  productService.updateProduct(product);}
+    public Product editProduct(@RequestBody Product product) {
+        return productService.updateProduct(product);
+    }
 
     @DeleteMapping(value = "/{productNumber}")
-    public void deleteProduct(@PathVariable(value = "productNumber") int productNumber){ productService.deleteProduct(productNumber);}
+    public void deleteProduct(@PathVariable(value = "productNumber") int productNumber){
+        productService.deleteProduct(productNumber);
+    }
 
     @GetMapping (value = "/{productNumber}")
-    public Product getProduct (@PathVariable(value = "productNumber") int productNumber) {return productService.getProduct(productNumber);}
+    public Product getProduct (@PathVariable(value = "productNumber") int productNumber) {
+        return productService.getProduct(productNumber);
+    }
 
     @GetMapping
-    public List<Product> getProducts() {return productService.getListOfProducts();}
+    public List<Product> getProducts() {
+        return productService.getListOfProducts();
+    }
 }

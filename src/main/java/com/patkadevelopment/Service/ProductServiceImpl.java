@@ -29,6 +29,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
+    public List<Product> createManyProducts(List<Product> productList) {
+        //productList.forEach(product -> productRepository.save(product));
+        return productRepository.saveAll(productList);
+
+    }
+
+    @Override
+    @Transactional
     public void deleteProduct(int productNumber) {
         //ToDo: tu czeba sprawdzic czy  product istnieje zanim bedziemy go usuwac zdeby nie jebnac  errorem 500
         productRepository.deleteById(productNumber);
