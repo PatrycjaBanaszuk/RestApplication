@@ -27,8 +27,8 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     @Transactional
-    public void deleteProblem(int huNumber) {
-        problemRepository.deleteById(huNumber);
+    public void deleteProblem(int problemId) {
+        problemRepository.deleteById(problemId);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class ProblemServiceImpl implements ProblemService {
     @Override
     @Transactional
     public Problem updateProblem(Problem problem) {
-        Problem problemForDB =problemRepository.findById(problem.getHuNumber()).orElseThrow(() -> new EntityNotFoundException());
+        Problem problemForDB = problemRepository.findById(problem.getProblemId()).orElseThrow(() -> new EntityNotFoundException());
         problemForDB.setBusinessPartner(problem.getBusinessPartner());
         problemForDB.setRmaNumber(problem.getRmaNumber());
         problemForDB.setProductQuantity(problem.getProductQuantity());
@@ -58,7 +58,7 @@ public class ProblemServiceImpl implements ProblemService {
 
     @Override
     @Transactional
-    public Problem getProblem(int huNumber) {
-        return problemRepository.findById(huNumber).orElseThrow( () -> new EntityNotFoundException());
+    public Problem getProblem(int problemId) {
+        return problemRepository.findById(problemId).orElseThrow( () -> new EntityNotFoundException());
     }
 }

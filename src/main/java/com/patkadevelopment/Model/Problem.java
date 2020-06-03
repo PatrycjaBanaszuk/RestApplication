@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @Where(clause = "deleted_Date is null")
 public class Problem {
-    // TODO: 30/05/2020 Change huNumber to problemId and relatively every usage of it
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int huNumber;
+    private int problemId;
 
     private String businessPartner;
     private int rmaNumber;
@@ -38,12 +38,12 @@ public class Problem {
     private LocalDateTime processedDate;
     private LocalDateTime deletedDate;
 
-    public int getHuNumber() {
-        return huNumber;
+    public int getProblemId() {
+        return problemId;
     }
 
-    public void setHuNumber(int huNumber) {
-        this.huNumber = huNumber;
+    public void setProblemId(int problemId) {
+        this.problemId = problemId;
     }
 
     public String getBusinessPartner() {

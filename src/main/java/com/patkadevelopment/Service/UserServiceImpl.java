@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public User updateUser(User user) {
-        User userForDB = userRepository.findById(user.getId()).orElseThrow( () -> new NullPointerException()); //ToDo: tu mozna  dodac EntityNotFound zamaisyt  NullPointerException!
+        User userForDB = userRepository.findById(user.getId()).orElseThrow( () -> new NullPointerException());
         userForDB.setFirstName(user.getFirstName());
         userForDB.setLastName(user.getLastName());
         userForDB.setAge(user.getAge());

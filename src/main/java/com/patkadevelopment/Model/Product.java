@@ -11,17 +11,17 @@ public class Product {
     // TODO: 30/05/2020 Change productNumber to productId and relatively every usage of it
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productNumber;
+    private int productId;
 
     private String description;
     private Long barcode;
 
-    public int getProductNumber() {
-        return productNumber;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProductNumber(int productNumber) {
-        this.productNumber = productNumber;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public String getDescription() {

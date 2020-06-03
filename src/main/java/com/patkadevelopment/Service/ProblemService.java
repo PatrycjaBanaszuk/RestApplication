@@ -8,11 +8,11 @@ public interface ProblemService {
 
     Problem createProblem (Problem problem);
 
-    void deleteProblem ( final int huNumber );
+    void deleteProblem (final int problemId);
 
     List<Problem> getListOfProblems();
 
     Problem updateProblem (Problem problem);
 
-    Problem getProblem (final int huNumber);
+    Problem getProblem (final int problemId);
 }

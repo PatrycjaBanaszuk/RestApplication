@@ -13,31 +13,37 @@ public class ProblemController {
     private ProblemService problemService;
 
     public ProblemController(ProblemService problemService) {
+
         this.problemService = problemService;
     }
 
     @PostMapping
     public Problem createProblem (@RequestBody Problem problem){
+
         return problemService.createProblem(problem);
     }
 
     @PutMapping
     public Problem updateProblem (@RequestBody Problem problem){
-     return problemService.updateProblem(problem);
+
+        return problemService.updateProblem(problem);
     }
 
-    @DeleteMapping (value = "/{huNumber}")
-    public void deleteProblem(@PathVariable(value = "huNumber") int huNumber){
-      problemService.deleteProblem(huNumber);
+    @DeleteMapping (value = "/{problemId}")
+    public void deleteProblem(@PathVariable(value = "problemId") int problemId){
+
+      problemService.deleteProblem(problemId);
     }
 
-    @GetMapping(value = "/{huNumber}")
-    public Problem getProblem (@PathVariable(value ="huNumber") int huNumber) {
-        return problemService.getProblem(huNumber);
+    @GetMapping(value = "/{problemId}")
+    public Problem getProblem (@PathVariable(value ="problemId") int problemId) {
+
+        return problemService.getProblem(problemId);
     }
 
     @GetMapping
     public List<Problem> getProblem () {
+        
         return problemService.getListOfProblems();
     }
 
