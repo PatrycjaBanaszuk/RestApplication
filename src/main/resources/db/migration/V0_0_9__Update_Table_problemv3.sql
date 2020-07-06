@@ -1,0 +1,4 @@
+ALTER TABLE problem
+CHANGE hu_number id
+INT AUTO_INCREMENT NOT NULL,
+DROP COLUMN product_id;

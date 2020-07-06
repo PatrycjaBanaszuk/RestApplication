@@ -10,13 +10,13 @@ public interface ProductService {
 
     List<Product> createManyProducts (List<Product> productList);
 
-    void deleteProduct (final int productId);
+    void deleteProduct (final int Id);
 
     List<Product> getListOfProducts();
 
     Product updateProduct (Product product);
 
-    Product getProduct(final int productId);
+    Product getProduct(final int Id);
 
 
 }

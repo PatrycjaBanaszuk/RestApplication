@@ -35,21 +35,20 @@ public class ProductController {
         return productService.updateProduct(product);
     }
 
-    @DeleteMapping(value = "/{productId}")
-    public void deleteProduct(@PathVariable(value = "productId") int productId) {
+    @DeleteMapping(value = "/{Id}")
+    public void deleteProduct(@PathVariable(value = "Id") int Id) {
 
-        productService.deleteProduct(productId);
+        productService.deleteProduct(Id);
     }
 
-    @GetMapping (value = "/{productId}")
-    public Product getProduct (@PathVariable(value = "productId") int productId) {
+    @GetMapping (value = "/{Id}")
+    public Product getProduct (@PathVariable(value = "Id") int Id) {
 
-        return productService.getProduct(productId);
+        return productService.getProduct(Id);
     }
 
     @GetMapping
     public List<Product> getProducts() {
-
         return productService.getListOfProducts();
     }
 }

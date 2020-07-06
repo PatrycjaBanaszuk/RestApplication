@@ -8,20 +8,16 @@ import javax.persistence.*;
 @EntityListeners(AuditingEntityListener.class)
 public class Product {
     // TODO: 29/05/2020 Relationship between product and problem
-    // TODO: 30/05/2020 Change productNumber to productId and relatively every usage of it
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    private int id;
 
     private String description;
     private Long barcode;
 
-    public int getProductId() {
-        return productId;
-    }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public int getId() {
+        return id;
     }
 
     public String getDescription() {

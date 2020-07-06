@@ -1,0 +1,3 @@
+ALTER TABLE product
+CHANGE COLUMN product_number id
+INT AUTO_INCREMENT;

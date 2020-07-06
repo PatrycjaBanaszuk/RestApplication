@@ -37,9 +37,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public void deleteProduct(int productId) {
+    public void deleteProduct(int Id) {
         //ToDo: tu czeba sprawdzic czy  product istnieje zanim bedziemy go usuwac zdeby nie jebnac  errorem 500
-        productRepository.deleteById(productId);
+        productRepository.deleteById(Id);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public Product updateProduct(Product product) {
-    Product productForDB = productRepository.findById(product.getProductId()).orElseThrow( () ->new EntityNotFoundException());
+    Product productForDB = productRepository.findById(product.getId()).orElseThrow( () ->new EntityNotFoundException());
        productForDB.setDescription(product.getDescription());
        productForDB.setBarcode(product.getBarcode());
         return productForDB;
@@ -60,8 +60,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public Product getProduct(int productId) {
+    public Product getProduct(int Id) {
 
-        return productRepository.findById(productId).orElseThrow( () -> new EntityNotFoundException());
+        return productRepository.findById(Id).orElseThrow( () -> new EntityNotFoundException());
     }
 }

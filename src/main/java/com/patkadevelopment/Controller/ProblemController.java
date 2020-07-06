@@ -29,16 +29,16 @@ public class ProblemController {
         return problemService.updateProblem(problem);
     }
 
-    @DeleteMapping (value = "/{problemId}")
-    public void deleteProblem(@PathVariable(value = "problemId") int problemId){
+    @DeleteMapping (value = "/{id}")
+    public void deleteProblem(@PathVariable(value = "id") int id){
 
-      problemService.deleteProblem(problemId);
+      problemService.deleteProblem(id);
     }
 
-    @GetMapping(value = "/{problemId}")
-    public Problem getProblem (@PathVariable(value ="problemId") int problemId) {
+    @GetMapping(value = "/{id}")
+    public Problem getProblem (@PathVariable(value ="id") int id) {
 
-        return problemService.getProblem(problemId);
+        return problemService.getProblem(id);
     }
 
     @GetMapping
