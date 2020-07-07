@@ -22,7 +22,7 @@ public class ClientController {
 
     @PutMapping
     public Client updateClient(@RequestBody Client client){
-        return clientService.createClient(client);
+        return clientService.updateClient(client);
     }
 
     @DeleteMapping(value = "/{id}")
