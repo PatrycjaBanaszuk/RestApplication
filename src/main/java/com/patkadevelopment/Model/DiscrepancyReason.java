@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class DiscrepancyReason {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
 
